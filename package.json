@@ -1,0 +1,25 @@
+{
+  "name": "oneconnect-webrtc",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "start": "cross-env NODE_ENV=production pm2 start app.js -i max",
+    "dev": "nodemon app.js",
+    "pm2": "pm2 start app.js --name=videoApp",
+    "pm2-restart": "pm2 restart videoApp",
+    "pm2-stop": "pm2 stop videoApp",
+    "pm2-list": "pm2 list",
+    "pm2-delete": "pm2 delete videoApp"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "dependencies": {
+    "bluebird": "^3.7.2",
+    "express": "^4.18.1",
+    "pm2": "^5.2.0",
+    "socket.io": "^4.5.1"
+  }
+}
